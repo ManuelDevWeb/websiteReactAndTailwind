@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Icono de menú */}
-        <div className="md:hidden" onClick={handleClick}>
+        <div className="md:hidden mr-4" onClick={handleClick}>
           {
             // Si el nav es false, se muestra el icono de menú, sino, se muestra el icono de cerrar
             !nav ? (
