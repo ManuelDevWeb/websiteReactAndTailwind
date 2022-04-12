@@ -8,6 +8,8 @@ import About from './components/About';
 import Support from './components/Support';
 // Importando AllInOne
 import AllInOne from './components/AllInOne';
+// Importando Pricing
+import Pricing from './components/Pricing';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <About />
       <Support />
       <AllInOne />
+      <Pricing />
     </>
   );
 }
