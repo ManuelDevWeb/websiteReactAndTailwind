@@ -7,7 +7,7 @@ import { ChipIcon, SupportIcon } from '@heroicons/react/solid';
 
 const Support = () => {
   return (
-    <div className="w-full h-screen mt-24">
+    <div className="w-full mt-24">
       {/* Image */}
       <div className="w-full h-[700px] bg-gray-900/90 absolute">
         <img
@@ -25,7 +25,7 @@ const Support = () => {
           <h3 className="text-5xl font-bold py-6 text-center">
             Finding the right team
           </h3>
-          <p className="py-4 text-3xl text-slate-300">
+          <p className="py-4 text-2xl text-slate-300">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
             perspiciatis, ab rerum, dolor amet veniam dolorem, ipsam facilis
             reiciendis ipsa porro optio similique quaerat iste laudantium ullam.
