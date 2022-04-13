@@ -2,6 +2,9 @@ import { useState } from 'react';
 
 // Importando iconos de Heroicons
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+// Importando React Scroll
+// eslint-disable-next-line no-unused-vars
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
   // State para manejar el estado de la barra de navegación
@@ -9,6 +12,8 @@ const Navbar = () => {
 
   // Función para cambiar el estado de la barra de navegación
   const handleClick = () => setNav(!nav);
+  // Función para cerrar la barra de navegación mobile
+  const handleClose = () => setNav(!nav);
 
   return (
     <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
@@ -17,11 +22,21 @@ const Navbar = () => {
         <div className="flex items-center">
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl">BRAND.</h1>
           <ul className="hidden md:flex">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platforms</li>
-            <li>Pricing</li>
+            <Link to="home" smooth={true} duration={500}>
+              <li>Home</li>
+            </Link>
+            <Link to="about" smooth={true} offset={-200} duration={500}>
+              <li>About</li>
+            </Link>
+            <Link to="support" smooth={true} offset={-50} duration={500}>
+              <li>Support</li>
+            </Link>
+            <Link to="platforms" smooth={true} offset={-100} duration={500}>
+              <li>Platforms</li>
+            </Link>
+            <Link to="pricing" smooth={true} offset={-50} duration={500}>
+              <li>Pricing</li>
+            </Link>
           </ul>
         </div>
 
@@ -51,11 +66,45 @@ const Navbar = () => {
         nav && (
           // Menú de navegación mobile
           <ul className="absolute bg-zinc-200 w-full px-8">
-            <li className="border-b-2 border-zinc-300 w-full">Home</li>
-            <li className="border-b-2 border-zinc-300 w-full">About</li>
-            <li className="border-b-2 border-zinc-300 w-full">Support</li>
-            <li className="border-b-2 border-zinc-300 w-full">Platforms</li>
-            <li className="border-b-2 border-zinc-300 w-full">Pricing</li>
+            <Link onClick={handleClose} to="home" smooth={true} duration={500}>
+              <li className="border-b-2 border-zinc-300 w-full">Home</li>
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="about"
+              smooth={true}
+              offset={-200}
+              duration={500}
+            >
+              <li className="border-b-2 border-zinc-300 w-full">About</li>
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="support"
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              <li className="border-b-2 border-zinc-300 w-full">Support</li>
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="platforms"
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              <li className="border-b-2 border-zinc-300 w-full">Platforms</li>
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="pricing"
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              <li className="border-b-2 border-zinc-300 w-full">Pricing</li>
+            </Link>
 
             {/* Buttons de navegación mobile */}
             <div className="flex flex-col my-4">

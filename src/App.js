@@ -10,6 +10,8 @@ import Support from './components/Support';
 import AllInOne from './components/AllInOne';
 // Importando Pricing
 import Pricing from './components/Pricing';
+// Importando Footer
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Support />
       <AllInOne />
       <Pricing />
+      <Footer />
     </>
   );
 }
